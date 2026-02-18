@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Binary Watch</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Binary Watch</h1>
+        <div class="watch-card">
+            <div class="segment">
+                <p class="label">HOURS</p>
+                <div class="led-row hours">
+                    <div class="led" data-bit="8"></div>
+                    <div class="led" data-bit="4"></div>
+                    <div class="led" data-bit="2"></div>
+                    <div class="led" data-bit="1"></div>
+                </div>
+            </div>
+    
+            <div class="segment">
+                <p class="label">MINUTES</p>
+                <div class="led-row minutes">
+                    <div class="led" data-bit="32"></div>
+                    <div class="led" data-bit="16"></div>
+                    <div class="led" data-bit="8"></div>
+                    <div class="led" data-bit="4"></div>
+                    <div class="led" data-bit="2"></div>
+                    <div class="led" data-bit="1"></div>
+                </div>
+            </div>
+    
+            <div class="footer">
+                <div class="time-display" id="currentTime">00:00:00</div>
+                <div class="pm-tag" id="pmIndicator">PM</div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
