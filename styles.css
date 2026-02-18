@@ -111,7 +111,7 @@ h1 {
 }
 
 .author a {
-    color: var(--lavender)
+    color: var(--lavender);
     text-decoration: none;
     font-weight: 500;
     transition: opacity 0.3s ease;
