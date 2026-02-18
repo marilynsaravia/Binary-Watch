@@ -96,6 +96,31 @@ h1 {
   color: var(--lavender);
 }
 
+.author {
+    position: fixed;  
+    bottom: 20px;     
+    left: 0;
+    right: 0;        
+    text-align: center;
+    z-index: 10;      
+}
+
+.author small {
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.author a {
+    color: var(--lavender)
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.author a:hover {
+    opacity: 0.7;
+}
+
 @keyframes pulse {
   50% { opacity: 0.6; }
 }
