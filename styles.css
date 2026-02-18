@@ -1,0 +1,102 @@
+:root {
+  --mint: #42E6A4;
+  --lavender: #998CEB;
+  --bg-soft: #f5f7f9;
+  --led-off: #e0e4e8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-soft);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  color: #353535;
+  text-align:center;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}
+
+.watch-card {
+  background: white;
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  width: 350px;
+  text-align: center;
+}
+
+.segment {
+  margin-bottom: 30px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #333;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.led-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.led {
+  width: 32px;
+  height: 32px;
+  background-color: var(--led-off);
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hours .led.on, .minutes .led.on {
+  background-color: var(--mint);
+  box-shadow: 0 0 20px rgba(66, 230, 164, 0.5);
+  transform: scale(1.1);
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.time-display {
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--lavender);
+  opacity: 0.8;
+  text-shadow: 0 0 10px rgba(153, 140, 235, 0.2);
+}
+
+.pm-tag {
+  font-size: 14px;
+  color: var(--led-off);
+  transition: color 0.3s;
+}
+
+.pm-tag.on {
+  color: var(--lavender);
+}
+
+@keyframes pulse {
+  50% { opacity: 0.6; }
+}
+.time-display { animation: pulse 2s infinite; }
